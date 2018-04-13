@@ -4,7 +4,8 @@ A minimal python interface to the www.worldtradingdata.com API
 
 ## Description
 
-Retrieve daily historical stock data from www.worldtradingdata.com
+Retrieve daily historical stock data from www.worldtradingdata.com. Fields returned are open price, close price, high,
+low and volume.
 
 
 ## Getting Started
@@ -48,15 +49,17 @@ date | open | close | high | low | volume
 2018-04-11 | 172.23 | 172.44 | 173.92 | 171.70 | 22431640
 2018-04-12 | 173.41 | 174.14 | 175.00 | 173.04 | 22889285
 
-Save as `.csv`
+To save as `.csv`:
 
 `data.to_csv('data.csv')`
 
 ## Notes
-This is a work in progress
+For ASX stocks, use the ticker format 'CBA.AX'
+
+This is a quick and dirty work in progress
 
 To do: add interface to detailed quote
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE file for details
