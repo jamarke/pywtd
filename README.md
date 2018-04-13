@@ -1,4 +1,4 @@
-# py-wtd
+# pywtd
 
 A minimal python interface to the www.worldtradingdata.com API
 
@@ -16,7 +16,7 @@ requests
 ### Installing
 
 ```
-git clone https://github.com/jamarke/py-wtd.git`
+git clone https://github.com/jamarke/pywtd.git
 pip install .
 ```
 
@@ -26,7 +26,7 @@ Register at https://www.worldtradingdata.com/register and get your API key.
 ### Examples
 
 ```
-import py-wtd as wtd
+import pywtd as wtd
 wtd.ApiConfig.api_key = YOUR_API_KEY
 ```
 

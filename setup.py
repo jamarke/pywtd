@@ -1,9 +1,9 @@
 import setuptools
 
 setuptools.setup(
-    name="py-wtd",
+    name="pywtd",
     version="0.1.0",
-    url="https://github.com/jamarke/py-wtd",
+    url="https://github.com/jamarke/pywtd",
 
     author="jamarke",
     author_email="tacocorporation@protonmail.com",
@@ -13,8 +13,8 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
-    install_requires=['pandas>0.22.0',
-                      'requests>2.18.4'],
+    install_requires=['pandas>=0.22.0',
+                      'requests>=2.18.4'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
