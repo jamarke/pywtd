@@ -4,14 +4,15 @@ A minimal python interface to the www.worldtradingdata.com API
 
 ## Description
 
-Retrieve historical stock data from www.worldtradingdata.com
+Retrieve daily historical stock data from www.worldtradingdata.com
+
 
 ## Getting Started
 
 ### Dependencies
 
-pandas
-requests
+* pandas
+* requests
 
 ### Installing
 
@@ -27,14 +28,34 @@ Register at https://www.worldtradingdata.com/register and get your API key.
 
 ```
 import pywtd as wtd
-wtd.ApiConfig.api_key = YOUR_API_KEY
+wtd.ApiConfig.api_key = 'YOUR_API_KEY'
 ```
 
 Retrieve historical stock data, returns a pandas DataFrame:
 
-`data = wtd.get('CBA.AX', date_from='2017-01-01', date_to='2018-01-01')`
+```
+data = wtd.get('AAPL', date_from='2017-01-01', date_to='2018-04-12')
+data.tail()
+```
 
+Result:
 
+date | open | close | high | low | volume
+--- | --- | --- | --- | --- | --- |
+2018-04-06 | 170.97 | 168.38 | 172.48 | 168.20 | 35005290
+2018-04-09 | 169.88 | 170.05 | 173.09 | 169.85 | 29017718
+2018-04-10 | 173.00 | 173.25 | 174.00 | 171.53 | 28614241
+2018-04-11 | 172.23 | 172.44 | 173.92 | 171.70 | 22431640
+2018-04-12 | 173.41 | 174.14 | 175.00 | 173.04 | 22889285
+
+Save as `.csv`
+
+`data.to_csv('data.csv')`
+
+## Notes
+This is a work in progress
+
+To do: add interface to detailed quote
 
 ## License
 
